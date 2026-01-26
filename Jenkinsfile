@@ -18,7 +18,7 @@ pipeline {
                 echo 'Running tests...'
                 // Activate the venv and run tests with pytest
                 sh '. venv/bin/activate'
-                sh 'pytest test/'
+                sh 'pytest test/tests.py'
             }
         }
         stage('Deploy') {

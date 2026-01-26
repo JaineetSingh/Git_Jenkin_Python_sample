@@ -1,0 +1,31 @@
+// Jenkinsfile
+
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+                // Create a virtual environment and install dependencies
+                sh 'python3 -m venv venv'
+                sh '. venv/bin/activate'
+                sh 'pip install -r requirements.txt'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // Activate the venv and run tests with pytest
+                sh '. venv/bin/activate'
+                sh 'pytest tests/'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deployment stage (e.g., publish to a registry or environment).'
+                // Add deployment steps here
+            }
+        }
+    }
+}

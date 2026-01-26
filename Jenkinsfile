@@ -10,7 +10,7 @@ pipeline {
                 // Create a virtual environment and install dependencies
                 sh 'python3 -m venv venv'
                 sh '. venv/bin/activate'
-                sh 'pip install -r requirements.txt'
+             
             }
         }
         stage('Test') {

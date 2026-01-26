@@ -10,7 +10,7 @@ pipeline {
                 // Create a virtual environment and install dependencies
                 sh 'python3 -m venv venv'
                 sh '. venv/bin/activate'
-             
+
             }
         }
         stage('Test') {
@@ -18,7 +18,7 @@ pipeline {
                 echo 'Running tests...'
                 // Activate the venv and run tests with pytest
                 sh '. venv/bin/activate'
-                sh 'pytest tests/'
+                sh 'pytest test/'
             }
         }
         stage('Deploy') {

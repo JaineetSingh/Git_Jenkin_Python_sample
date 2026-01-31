@@ -15,4 +15,4 @@ def test_add_mixed_numbers():
     assert add(5, -3) == 2
 
 def test_add_mixed_numbers2():
-    assert add(5, -3) == 22
+    assert add(5, -3) == 2
